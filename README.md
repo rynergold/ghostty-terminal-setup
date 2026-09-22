@@ -1,86 +1,70 @@
-# 👻 Ghostty + Zsh High-Performance Terminal Setup
+# Ghostty + Zsh Terminal Setup
 
-A curated, zero-lag macOS terminal environment built for **Neovim**, powered by **Ghostty GPU acceleration**, **Antidote**, and a **pure native Zsh prompt** (~38ms launch time).
-
----
-
-## ✨ Features
-
-- **🚀 Instant Startup (~38ms):** Eliminated synchronous disk audits via 24-hour `compinit -C` caching and lazy-loaded toolchains (NVM, SDKMAN, rbenv).
-- **🎨 Visual Aesthetics:** TokyoNight Moon low-contrast pastel palette with custom-framed Totoro background.
-- **🪟 Window Management:** Full **Rectangle.app** snapping support with clean borderless styling and single `Option + \`` global toggle (`toggle_visibility`).
-- **⚡ Neovim-Ready:** Programming ligatures enabled (`calt`, `liga`, `dlig`), seamless clipboard sharing, and block cursor alignment.
-- **🌿 Pure Native Git Prompt:** Zero external binaries (0.00ms prompt render) displaying `~` home formatting and active git branch (` main*`).
-- **📦 Essential Antidote Suite:** Streamlined to 3 core plugins: `zsh-autosuggestions`, `zsh-syntax-highlighting`, and `jeffreytse/zsh-vi-mode`.
-- **📂 Modern CLI Aliases:** `eza` (icons + git status tree) and `bat` (syntax-highlighted cat).
+A macOS terminal configuration using Ghostty and Zsh, tuned for fast startup (~38ms) and Neovim workflows.
 
 ---
 
-## 📂 Repository Structure
+## Highlights
+
+- **Fast startup:** Uses 24-hour `compinit -C` caching and lazy-loads heavy toolchains (NVM, SDKMAN, rbenv) so new shells open in under 40ms.
+- **TokyoNight Moon palette:** Low-contrast theme with a framed Totoro background.
+- **Window management:** Borderless window with Rectangle snapping support and an `Option + \`` visibility toggle.
+- **Neovim integration:** Enables font ligatures (`calt`, `liga`, `dlig`), system clipboard sharing, and block cursor styling.
+- **Lightweight prompt:** Native Zsh prompt showing the current directory and Git branch (` branch*`) without external binary dependencies.
+- **Antidote plugins:** Kept minimal with autosuggestions, syntax highlighting, and `zsh-vi-mode`.
+- **Modern CLI defaults:** Aliases for `eza` and `bat`.
+
+---
+
+## File Layout
 
 ```
 .
 ├── ghostty/
-│   ├── config                 # Ghostty config (TokyoNight, ligatures, Rectangle-ready)
-│   └── totoro_custom_v2.jpg   # Tuned background wallpaper
+│   ├── config                 # Ghostty settings (theme, keybinds, ligatures)
+│   └── totoro_custom_v2.jpg   # Background wallpaper
 ├── zsh/
-│   ├── .zshrc                 # Zero-lag Zsh configuration
-│   └── .zsh_plugins.txt       # Antidote plugin bundle manifest
+│   ├── .zshrc                 # Shell configuration and lazy-loaders
+│   └── .zsh_plugins.txt       # Antidote plugin list
 └── README.md
 ```
 
 ---
 
-## 🛠️ Quickstart / Installation
+## Installation
 
-### 1. Prerequisites (macOS / Homebrew)
+### 1. Requirements
 ```bash
 brew install --cask ghostty
 brew install antidote fzf zoxide eza bat
-```
-
-### 2. Fonts
-Install **JetBrains Mono Nerd Font** for icons and ligatures:
-```bash
 brew install --cask font-jetbrains-mono-nerd-font
 ```
 
-### 3. Deploy Configs
+### 2. Copy Configs
 ```bash
-# Ghostty config
+# Ghostty
 mkdir -p ~/.config/ghostty
 cp ghostty/config ~/.config/ghostty/config
 cp ghostty/totoro_custom_v2.jpg ~/.config/ghostty/totoro_custom_v2.jpg
 
-# Zsh config
+# Zsh
 cp zsh/.zsh_plugins.txt ~/.zsh_plugins.txt
 cp zsh/.zshrc ~/.zshrc
 
-# Generate compiled plugin cache
+# Compile plugins
 zsh -i -c "antidote bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.zsh"
 ```
 
 ---
 
-## ⌨️ Shortcuts & Cheatsheet
+## Keybinds and Aliases
 
 | Action | Shortcut / Command |
 | :--- | :--- |
-| **Toggle Terminal** | `Option` + `` ` `` |
-| **History Fuzzy Search** | `Ctrl` + `R` |
-| **Smart Directory Jump** | `z <folder-name>` |
-| **Vim Normal Mode** | `Esc` (`w`, `b`, `ciw`, `u`) |
-| **Git Shortcuts** | `gs` (status), `ga` (add), `gc` (commit), `gp` (push) |
-| **Modern File Listing** | `ls` (with icons), `ll` (git details), `lt` (tree) |
-| **Syntax Cat** | `cat <filename>` |
-
----
-
-## 🔒 Private / Work Secrets
-
-Any private tokens or company VPN configs can be placed in `~/.zshrc.local` (automatically sourced by `.zshrc` and kept untracked):
-
-```bash
-# ~/.zshrc.local
-export MY_SECRET_TOKEN="xxx"
-```
+| Toggle terminal visibility | `Option + \`` |
+| Fuzzy history search | `Ctrl + R` |
+| Directory jump | `z <folder>` |
+| Vim normal mode | `Esc` (`w`, `b`, `ciw`, `u`) |
+| Git shortcuts | `gs`, `ga`, `gc`, `gp` |
+| File list with icons | `ls`, `ll`, `lt` |
+| Syntax-highlighted view | `cat <file>` |
