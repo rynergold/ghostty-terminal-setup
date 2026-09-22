@@ -1,0 +1,6 @@
+# Vim Navigation in Terminal
+jeffreytse/zsh-vi-mode
+
+# Interactive UX (load at the end)
+zsh-users/zsh-autosuggestions
+zsh-users/zsh-syntax-highlighting

@@ -1,0 +1,37 @@
+# === GHOSTTY CONFIGURATION ===
+
+# Font & Ligatures (JetBrains Mono Nerd Font)
+font-family = "JetBrainsMono Nerd Font"
+font-size = 17
+adjust-cell-height = 15%
+font-feature = ["calt", "liga", "dlig"]
+
+# Color Theme (TokyoNight Moon - Soft pastel low-contrast)
+theme = TokyoNight Moon
+
+# Window Appearance (100% Clean & Borderless - No Status Bar / Title Bar)
+window-padding-x = 16
+window-padding-y = 16
+window-decoration = false
+macos-titlebar-style = hidden
+
+# Global Hotkey (Toggles visibility while PRESERVING Rectangle positions)
+# Shortcut: Option + `
+keybind = global:opt+grave_accent=toggle_visibility
+window-save-state = always
+macos-non-native-fullscreen = true
+
+# Neovim & UX Settings
+clipboard-read = allow
+clipboard-write = allow
+cursor-style = block
+cursor-style-blink = false
+mouse-hide-while-typing = true
+window-inherit-working-directory = true
+unfocused-split-opacity = 0.85
+
+# === BACKGROUND IMAGE ===
+background-image = /Users/ryner/.config/ghostty/totoro_custom_v2.jpg
+background-image-opacity = 0.16
+background-image-fit = cover
+background-image-position = top-center
