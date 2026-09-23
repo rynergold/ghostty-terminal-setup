@@ -8,12 +8,10 @@ font-feature = ["calt", "liga", "dlig"]
 
 # Color Theme (TokyoNight Moon - Soft pastel low-contrast)
 theme = TokyoNight Moon
-background = #101112
 
 # Window Appearance (100% Clean & Borderless - No Status Bar / Title Bar)
-window-padding-x = 0
-window-padding-y = 0
-window-padding-balance = false
+window-padding-x = 16
+window-padding-y = 16
 window-decoration = false
 macos-titlebar-style = hidden
 
