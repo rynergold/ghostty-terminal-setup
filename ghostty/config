@@ -20,6 +20,7 @@ macos-titlebar-style = hidden
 keybind = global:opt+grave_accent=toggle_visibility
 window-save-state = never
 working-directory = home
+fullscreen = true
 macos-non-native-fullscreen = true
 
 # Neovim & UX Settings
