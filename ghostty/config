@@ -13,6 +13,7 @@ theme = TokyoNight Moon
 window-padding-x = 0
 window-padding-y = 0
 window-padding-balance = false
+window-padding-color = extend-always
 window-decoration = false
 macos-titlebar-style = hidden
 
