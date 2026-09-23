@@ -82,6 +82,9 @@ antidote load
 
 # Zoxide (Smarter cd)
 command -v zoxide >/dev/null 2>&1 && eval "$(zoxide init zsh)"
+zn() {
+  z "$@" && nvim .
+}
 
 # === PURE NATIVE ZSH PROMPT (0.00ms overhead) ===
 autoload -Uz vcs_info
