@@ -8,12 +8,12 @@ font-feature = ["calt", "liga", "dlig"]
 
 # Color Theme (TokyoNight Moon - Soft pastel low-contrast)
 theme = TokyoNight Moon
+background = #101112
 
 # Window Appearance (100% Clean & Borderless - No Status Bar / Title Bar)
 window-padding-x = 0
 window-padding-y = 0
 window-padding-balance = false
-window-step-resize = true
 window-decoration = false
 macos-titlebar-style = hidden
 
@@ -22,7 +22,6 @@ macos-titlebar-style = hidden
 keybind = global:opt+grave_accent=toggle_visibility
 window-save-state = never
 working-directory = home
-fullscreen = non-native
 macos-non-native-fullscreen = true
 
 # Neovim & UX Settings
