@@ -11,7 +11,7 @@ theme = TokyoNight Moon
 
 # Window Appearance (100% Clean & Borderless - No Status Bar / Title Bar)
 window-padding-x = 16
-window-padding-y = 16
+window-padding-y = 22
 window-decoration = false
 macos-titlebar-style = hidden
 
@@ -20,8 +20,10 @@ macos-titlebar-style = hidden
 keybind = global:opt+grave_accent=toggle_visibility
 window-save-state = never
 working-directory = home
-fullscreen = true
-macos-non-native-fullscreen = true
+
+# Full Window / Fullscreen Mode
+# 'non-native' expands borderless to full screen instantly without macOS space-switching animation
+fullscreen = non-native
 
 # Neovim & UX Settings
 clipboard-read = allow
@@ -33,7 +35,7 @@ window-inherit-working-directory = true
 unfocused-split-opacity = 0.85
 
 # === BACKGROUND IMAGE ===
-background-image = /Users/ryner/.config/ghostty/totoro_custom_v2.jpg
+background-image = ~/.config/ghostty/totoro_custom_v2.jpg
 background-image-opacity = 0.16
 background-image-fit = cover
 background-image-position = top-center

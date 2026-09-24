@@ -10,7 +10,7 @@ A macOS terminal configuration using Ghostty and Zsh, tuned for fast startup (~3
 - **TokyoNight Moon palette:** Low-contrast theme with a framed Totoro background.
 - **Window management:** Borderless window with Rectangle snapping support and an `Option + \`` visibility toggle.
 - **Neovim integration:** Enables font ligatures (`calt`, `liga`, `dlig`), system clipboard sharing, and block cursor styling.
-- **Lightweight prompt:** Native Zsh prompt showing the current directory and Git branch (` branch*`) without external binary dependencies.
+- **Lightweight prompt:** Pure native Zsh prompt showing the current directory and Git branch (`path | branch`) with 0.00ms overhead without external binary dependencies.
 - **Antidote plugins:** Kept minimal with autosuggestions, syntax highlighting, and `zsh-vi-mode`.
 - **Modern CLI defaults:** Aliases for `eza` and `bat`.
 
@@ -50,6 +50,9 @@ cp ghostty/totoro_custom_v2.jpg ~/.config/ghostty/totoro_custom_v2.jpg
 # Zsh
 cp zsh/.zsh_plugins.txt ~/.zsh_plugins.txt
 cp zsh/.zshrc ~/.zshrc
+
+# Silence login banner
+touch ~/.hushlogin
 
 # Compile plugins
 zsh -i -c "antidote bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.zsh"

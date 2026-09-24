@@ -1,5 +1,5 @@
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-export PATH="/Users/ryner/.rd/bin:$PATH"
+export PATH="$HOME/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
 
 # === SDKMAN & RBENV PATHS (Directly on PATH for 0ms startup) ===
@@ -10,27 +10,20 @@ export PATH="$SDKMAN_DIR/candidates/java/current/bin:$SDKMAN_DIR/candidates/grad
 export PATH="/opt/homebrew/bin:/opt/homebrew/opt/sqlite/bin:$HOME/bin:$HOME/.local/bin:$HOME/Library/Python/3.9/bin:$PATH"
 
 # Antigravity IDE
-export PATH="/Users/ryner/.antigravity-ide/antigravity-ide/bin:$PATH"
+export PATH="$HOME/.antigravity-ide/antigravity-ide/bin:$PATH"
 
 # Android SDK
 export ANDROID_HOME="$HOME/Library/Android/sdk"
 export PATH="$ANDROID_HOME/platform-tools:$ANDROID_HOME/emulator:$PATH"
 
-# === JET BRAINS - OPEN FILES/FOLDERS FROM CLI ===
-idea() {
-    open -na "IntelliJ IDEA.app" --args "$@"
-}
 
-webstorm() {
-    open -na "WebStorm.app" --args "$@"
-}
 
 # === WORK SECRETS & LOCAL CONFIGS (Ignored in Git) ===
 [ -f "$HOME/.zshrc.local" ] && source "$HOME/.zshrc.local"
 
 # === LANGUAGE & PACKAGE MANAGERS (Lazy-loaded for 0ms shell launch) ===
 # PNPM
-export PNPM_HOME="/Users/ryner/Library/pnpm"
+export PNPM_HOME="$HOME/Library/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME/bin:"*) ;;
   *) export PATH="$PNPM_HOME/bin:$PATH" ;;
@@ -62,7 +55,7 @@ rbenv() {
 }
 
 # Deno
-[ -f "/Users/ryner/.deno/env" ] && . "/Users/ryner/.deno/env"
+[ -f "$HOME/.deno/env" ] && . "$HOME/.deno/env"
 
 # === FAST COMPLETIONS CACHE (1ms startup) ===
 autoload -Uz compinit
@@ -89,14 +82,12 @@ zn() {
 # === PURE NATIVE ZSH PROMPT (0.00ms overhead) ===
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git
-zstyle ':vcs_info:git:*' check-for-changes true
-zstyle ':vcs_info:git:*' unstagedstr '%F{yellow}*%f'
-zstyle ':vcs_info:git:*' stagedstr '%F{green}+%f'
-zstyle ':vcs_info:git:*' formats ' %F{magenta} %b%u%c%f'
-zstyle ':vcs_info:git:*' actionformats ' %F{magenta} %b%u%c%f [%F{red}%a%f]'
+zstyle ':vcs_info:git:*' check-for-changes false
+zstyle ':vcs_info:git:*' formats ' %F{blue}|%f %F{magenta}%b%f'
+zstyle ':vcs_info:git:*' actionformats ' %F{blue}|%f %F{magenta}%b%f [%F{red}%a%f]'
 precmd() { vcs_info }
 setopt PROMPT_SUBST
-PROMPT='%F{cyan}%(3~|.../%2~|%~)%f${vcs_info_msg_0_}
+PROMPT='%F{cyan}%(5~|.../%3~|%~)%f${vcs_info_msg_0_}
 %F{yellow}❯%f '
 
 # === ALIASES & MODERN CLI REPLACEMENTS ===
@@ -120,4 +111,4 @@ if command -v bat >/dev/null 2>&1; then
 fi
 
 # Added by LM Studio CLI (lms)
-export PATH="$PATH:/Users/ryner/.lmstudio/bin"
+export PATH="$PATH:$HOME/.lmstudio/bin"
