@@ -21,9 +21,8 @@ keybind = global:opt+grave_accent=toggle_visibility
 window-save-state = never
 working-directory = home
 
-# Full Window / Fullscreen Mode
-# 'non-native' expands borderless to full screen instantly without macOS space-switching animation
-fullscreen = non-native
+# Window Mode (Allow Rectangle snapping)
+fullscreen = false
 
 # Neovim & UX Settings
 clipboard-read = allow
