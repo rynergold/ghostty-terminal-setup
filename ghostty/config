@@ -12,6 +12,7 @@ theme = TokyoNight Moon
 # Window Appearance (100% Clean & Borderless - No Status Bar / Title Bar)
 window-padding-x = 16
 window-padding-y = 22
+window-padding-balance = true
 window-decoration = false
 macos-titlebar-style = hidden
 
