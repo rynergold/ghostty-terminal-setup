@@ -16,12 +16,9 @@ window-padding-balance = true
 window-decoration = false
 macos-titlebar-style = hidden
 
-# Global Hotkey (Quake-style Quick Terminal Dropdown)
+# Global Hotkey (Toggles visibility while PRESERVING Rectangle positions)
 # Shortcut: Option + `
-keybind = global:opt+grave_accent=toggle_quick_terminal
-quick-terminal-position = top
-quick-terminal-animation-duration = 0.15
-quick-terminal-autohide = true
+keybind = global:opt+grave_accent=toggle_visibility
 window-save-state = never
 working-directory = home
 
