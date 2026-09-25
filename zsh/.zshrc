@@ -74,7 +74,7 @@ antidote load
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Zoxide (Smarter cd)
-command -v zoxide >/dev/null 2>&1 && eval "$(zoxide init zsh)"
+command -v zoxide >/dev/null 2>&1 && eval "$(command zoxide init zsh)"
 zn() {
   z "$@" && nvim .
 }
@@ -91,10 +91,6 @@ PROMPT='%F{cyan}%(5~|.../%3~|%~)%f${vcs_info_msg_0_}
 %F{yellow}❯%f '
 
 # === ALIASES & MODERN CLI REPLACEMENTS ===
-
-# Zoxide (remembers frequently searched)
-alias zoxide="z"
-
 alias gs="git status"
 alias ga="git add"
 alias gc="git commit"
