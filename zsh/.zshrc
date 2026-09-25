@@ -111,18 +111,13 @@ toys() {
      ██║   ╚██████╔╝   ██║   ███████║
      ╚═╝    ╚═════╝    ╚═╝   ╚══════╝
 EOF
-  echo -e "\033[1;36m1. sl\033[0m            Steam locomotive chugs across your screen"
-  echo -e "   \033[90mUsage: sl\033[0m"
-  echo -e "\033[1;36m2. asciiquarium\033[0m  Full-screen animated underwater aquarium"
-  echo -e "   \033[90mUsage: asciiquarium  (press 'q' to quit)\033[0m"
-  echo -e "\033[1;36m3. fortune\033[0m       Random witty quotes, jokes, and proverbs"
-  echo -e "   \033[90mUsage: fortune | lolcat\033[0m"
-  echo -e "\033[1;36m4. figlet\033[0m        Generate giant ASCII banner text"
-  echo -e "   \033[90mUsage: figlet \"Hello\" | lolcat\033[0m"
-  echo -e "\033[1;36m5. lolcat\033[0m        Colorize any command output in rainbows"
-  echo -e "   \033[90mUsage: <any-command> | lolcat\033[0m"
   echo ""
-  echo -e "\033[3mTry running: fortune | lolcat\033[0m"
+  echo -e "  \033[1;36msl\033[0m                      \033[38;5;250mSteam locomotive across your screen\033[0m"
+  echo -e "  \033[1;36masciiquarium\033[0m            \033[38;5;250mUnderwater animated aquarium \033[90m(press 'q' to quit)\033[0m"
+  echo -e "  \033[1;36mfortune \033[1;33m|\033[0m \033[1;35mlolcat\033[0m        \033[38;5;250mRandom witty quote in rainbows\033[0m"
+  echo -e "  \033[1;36mfiglet \033[0;32m\"hi\"\033[0m \033[1;33m|\033[0m \033[1;35mlolcat\033[0m    \033[38;5;250mGiant ASCII banner text\033[0m"
+  echo -e "  \033[90m<cmd>\033[0m \033[1;33m|\033[0m \033[1;35mlolcat\033[0m          \033[38;5;250mColorize any command output in rainbows\033[0m"
+  echo ""
 }
 
 alias gs="git status"
