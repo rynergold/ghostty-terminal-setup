@@ -23,6 +23,8 @@ A macOS terminal configuration using Ghostty and Zsh, tuned for fast startup (~3
 ├── ghostty/
 │   ├── config                 # Ghostty settings (theme, keybinds, ligatures)
 │   └── totoro_custom_v2.jpg   # Background wallpaper
+├── lazygit/
+│   └── config.yml             # Lazygit theme and rounded UI configuration
 ├── zsh/
 │   ├── .zshrc                 # Shell configuration and lazy-loaders
 │   └── .zsh_plugins.txt       # Antidote plugin list
@@ -46,6 +48,10 @@ brew install --cask font-jetbrains-mono-nerd-font
 mkdir -p ~/.config/ghostty
 cp ghostty/config ~/.config/ghostty/config
 cp ghostty/totoro_custom_v2.jpg ~/.config/ghostty/totoro_custom_v2.jpg
+
+# Lazygit
+mkdir -p ~/.config/lazygit
+cp lazygit/config.yml ~/.config/lazygit/config.yml
 
 # Zsh
 cp zsh/.zsh_plugins.txt ~/.zsh_plugins.txt
