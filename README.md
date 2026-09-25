@@ -11,7 +11,7 @@ A macOS terminal configuration using Ghostty and Zsh, tuned for fast startup (~3
 - **Window management:** Borderless window with Rectangle snapping support and an `Option + \`` visibility toggle.
 - **Neovim integration:** Enables font ligatures (`calt`, `liga`, `dlig`), system clipboard sharing, and block cursor styling.
 - **Lightweight prompt:** Pure native Zsh prompt showing the current directory and Git branch (`path | branch`) with 0.00ms overhead without external binary dependencies.
-- **Antidote plugins:** Kept minimal with autosuggestions, syntax highlighting, and `zsh-vi-mode`.
+- **Antidote plugins:** Kept minimal with `zsh-vi-mode` for modal Vim command-line editing.
 - **Modern CLI defaults:** Aliases for `eza` and `bat`.
 
 ---

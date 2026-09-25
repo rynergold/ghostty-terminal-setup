@@ -65,7 +65,7 @@ else
   compinit -C
 fi
 
-# === ANTIDOTE PLUGIN MANAGER (3 Core Plugins) ===
+# === ANTIDOTE PLUGIN MANAGER (zsh-vi-mode) ===
 source /opt/homebrew/opt/antidote/share/antidote/antidote.zsh
 antidote load
 
@@ -91,6 +91,10 @@ PROMPT='%F{cyan}%(5~|.../%3~|%~)%f${vcs_info_msg_0_}
 %F{yellow}❯%f '
 
 # === ALIASES & MODERN CLI REPLACEMENTS ===
+
+# Zoxide (remembers frequently searched)
+alias zoxide="z"
+
 alias gs="git status"
 alias ga="git add"
 alias gc="git commit"
