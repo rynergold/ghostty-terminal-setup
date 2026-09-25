@@ -87,7 +87,7 @@ zstyle ':vcs_info:git:*' formats ' %F{blue}|%f %F{magenta}%b%f'
 zstyle ':vcs_info:git:*' actionformats ' %F{blue}|%f %F{magenta}%b%f [%F{red}%a%f]'
 precmd() { vcs_info }
 setopt PROMPT_SUBST
-PROMPT='%F{cyan}%(5~|.../%3~|%~)%f${vcs_info_msg_0_}
+PROMPT='%F{cyan}%1~%f${vcs_info_msg_0_}
 %F{yellow}❯%f '
 
 # === ALIASES & MODERN CLI REPLACEMENTS ===
