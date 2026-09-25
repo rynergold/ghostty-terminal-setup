@@ -69,5 +69,6 @@ zsh -i -c "antidote bundle < ~/.zsh_plugins.txt > ~/.zsh_plugins.zsh"
 | Directory jump | `z <folder>` |
 | Vim normal mode | `Esc` (`w`, `b`, `ciw`, `u`) |
 | Git shortcuts | `gs`, `ga`, `gc`, `gp` |
+| Smart Gradle wrapper | `gw <tasks>` |
 | File list with icons | `ls`, `ll`, `lt` |
 | Syntax-highlighted view | `cat <file>` |

@@ -91,6 +91,19 @@ PROMPT='%F{cyan}%(5~|.../%3~|%~)%f${vcs_info_msg_0_}
 %F{yellow}❯%f '
 
 # === ALIASES & MODERN CLI REPLACEMENTS ===
+# Gradle wrapper shorthand (finds gradlew in current or parent directory)
+gw() {
+  local dir="$PWD"
+  while [[ "$dir" != "/" ]]; do
+    if [[ -x "$dir/gradlew" ]]; then
+      "$dir/gradlew" "$@"
+      return $?
+    fi
+    dir="$(dirname "$dir")"
+  done
+  command gradle "$@"
+}
+
 alias gs="git status"
 alias ga="git add"
 alias gc="git commit"
