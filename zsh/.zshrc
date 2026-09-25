@@ -15,9 +15,9 @@ export PATH="$HOME/.antigravity-ide/antigravity-ide/bin:$PATH"
 # Android SDK
 export ANDROID_HOME="$HOME/Library/Android/sdk"
 export PATH="$ANDROID_HOME/platform-tools:$ANDROID_HOME/emulator:$PATH"
-
-
-
+# === DOCKER & TESTCONTAINERS (Colima on-demand) ===
+export DOCKER_HOST="unix://${HOME}/.colima/default/docker.sock"
+export TESTCONTAINERS_DOCKER_SOCKET_OVERRIDE="/var/run/docker.sock"
 # === WORK SECRETS & LOCAL CONFIGS (Ignored in Git) ===
 [ -f "$HOME/.zshrc.local" ] && source "$HOME/.zshrc.local"
 
