@@ -1,6 +1,3 @@
-### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-export PATH="$HOME/.rd/bin:$PATH"
-### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
 
 # === SDKMAN & RBENV PATHS (Directly on PATH for 0ms startup) ===
 export SDKMAN_DIR="$HOME/.sdkman"
@@ -102,6 +99,27 @@ gw() {
     dir="$(dirname "$dir")"
   done
   command gradle "$@"
+}
+
+# Terminal Toys Menu
+toys() {
+  cat << 'EOF' | lolcat -F 0.3
+  ╔═══════════════════════════════════════════════════════════╗
+  ║                      🎮 TERMINAL TOYS                     ║
+  ╚═══════════════════════════════════════════════════════════╝
+EOF
+  echo -e "\033[1;36m1. sl\033[0m            Steam locomotive chugs across your screen"
+  echo -e "   \033[90mUsage: sl\033[0m"
+  echo -e "\033[1;36m2. asciiquarium\033[0m  Full-screen animated underwater aquarium"
+  echo -e "   \033[90mUsage: asciiquarium  (press 'q' to quit)\033[0m"
+  echo -e "\033[1;36m3. fortune\033[0m       Random witty quotes, jokes, and proverbs"
+  echo -e "   \033[90mUsage: fortune | lolcat\033[0m"
+  echo -e "\033[1;36m4. figlet\033[0m        Generate giant ASCII banner text"
+  echo -e "   \033[90mUsage: figlet \"Hello\" | lolcat\033[0m"
+  echo -e "\033[1;36m5. lolcat\033[0m        Colorize any command output in rainbows"
+  echo -e "   \033[90mUsage: <any-command> | lolcat\033[0m"
+  echo ""
+  echo -e "\033[3mTry running: fortune | lolcat\033[0m"
 }
 
 alias gs="git status"
