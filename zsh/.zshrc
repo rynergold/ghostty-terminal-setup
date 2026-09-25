@@ -112,11 +112,11 @@ toys() {
      ╚═╝    ╚═════╝    ╚═╝   ╚══════╝
 EOF
   echo ""
-  echo -e "  \033[1;36msl\033[0m                      \033[38;5;250mSteam locomotive across your screen\033[0m"
-  echo -e "  \033[1;36masciiquarium\033[0m            \033[38;5;250mUnderwater animated aquarium \033[90m(press 'q' to quit)\033[0m"
-  echo -e "  \033[1;36mfortune \033[1;33m|\033[0m \033[1;35mlolcat\033[0m        \033[38;5;250mRandom witty quote in rainbows\033[0m"
-  echo -e "  \033[1;36mfiglet \033[0;32m\"hi\"\033[0m \033[1;33m|\033[0m \033[1;35mlolcat\033[0m    \033[38;5;250mGiant ASCII banner text\033[0m"
-  echo -e "  \033[90m<cmd>\033[0m \033[1;33m|\033[0m \033[1;35mlolcat\033[0m          \033[38;5;250mColorize any command output in rainbows\033[0m"
+  echo -e "  \033[1;36msl\033[0m                      \033[90m|\033[0m  \033[38;5;250mSteam locomotive across your screen\033[0m"
+  echo -e "  \033[1;36masciiquarium\033[0m            \033[90m|\033[0m  \033[38;5;250mUnderwater animated aquarium \033[90m(press 'q' to quit)\033[0m"
+  echo -e "  \033[1;36mfortune\033[0m                 \033[90m|\033[0m  \033[38;5;250mRandom witty quotes and proverbs\033[0m"
+  echo -e "  \033[1;36mfiglet \033[0;32m\"hi\"\033[0m             \033[90m|\033[0m  \033[38;5;250mGiant ASCII banner text\033[0m"
+  echo -e "  \033[90m<cmd>\033[0m \033[1;33m|\033[0m \033[1;35mlolcat\033[0m          \033[90m|\033[0m  \033[38;5;250mPipe any command to colorize in rainbows \033[90m(e.g. fortune | lolcat)\033[0m"
   echo ""
 }
 
